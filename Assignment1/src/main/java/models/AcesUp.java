@@ -73,7 +73,6 @@ public class AcesUp implements Serializable {
         }
     }
 
-
     public void shuffleDeck(){
         Random rand = null;
         int size = deck.size();
@@ -87,6 +86,10 @@ public class AcesUp implements Serializable {
             deck.set(randomNum1, deck.get(randomNum2));
             deck.set(randomNum2, temp);
         }
+    }
+
+    public String getCard( int index ){
+        return deck.get(index);
     }
 
     public int numberOfItems() {
