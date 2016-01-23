@@ -88,15 +88,64 @@
 <br>
 <button id="moveButton">Move</button>
 <br>
-<h6 style="font-size:16;display:inline">From:</h6>
-<input type="text" name="moveFrom" size="5">
-<h6 style="font-size:16;display:inline">To:</h6>
-<input type="text" name="moveTo" size="5">
+<h6 style="font-size:16;display:inline">From Column:</h6>
+<input type="text" id="moveFrom" size="5">
+<h6 style="font-size:16;display:inline">To Column:</h6>
+<input type="text" id="moveTo" size="5">
 <br>
 <button on onclick="addscore()" id="removeButton">Remove</button>
 <input type="text" name="removeCol" size="5">
 
 <script>
+<<<<<<< HEAD
+    var DataToSend;
+
+    $("#moveButton").click(function(){
+        console.log("clicked");
+        DataToSend = $("#moveFrom").val();
+        console.log(DataToSend);
+        $.ajax({
+            type: "POST",
+            url: "/MoveCardTo",
+            data: JSON.stringify(DataToSend),
+            success: function(data, status)
+                {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    DataToSend = data;
+
+                },
+            failure: function(errMsg)
+            {
+                alert(errMsg);
+            },
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            });
+    });
+
+    $("#dealButton").click(function(){
+        console.log("Deal button clicked");
+        DataToSend ="DealCards"
+        console.log(DataToSend);
+        $.ajax({
+            type: "POST",
+            url: "/StartDealingCard",
+            data: JSON.stringify(DataToSend),
+            success: function(data, status)
+                {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    DataToSend = data;
+
+                },
+            failure: function(errMsg)
+            {
+                alert(errMsg);
+            },
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            });
+    });
+=======
 var scoreValue =0;
 function addscore(){
 scoreValue = scoreValue +500;
@@ -104,7 +153,10 @@ document.getElementById("score").innerHTML = scoreValue;
 }
 //This is just simple click and add points to score, complete function is waiting for card remove variable for bool.
 
+>>>>>>> origin/master
 </script>
+
+
 
 </body>
 </html>
