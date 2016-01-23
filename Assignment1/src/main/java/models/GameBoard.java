@@ -25,4 +25,5 @@ public class GameBoard implements Serializable {
     public int getSize() {
         return ColumnList.size();
     }
+
 }
