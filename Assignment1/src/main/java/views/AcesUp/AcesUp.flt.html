@@ -2,9 +2,9 @@
 
 <link href="/assets/css/AcesUp.css" rel="stylesheet">
 <script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
-
 <body>
 
+<h2> Score: </h2><p id="score">0</p>
 <table>
     <tr class="title">
         <td>Column1</td>
@@ -18,17 +18,16 @@
             <tr><td class="cardLocation l0"></td></tr>
             <tr><td class="cardLocation l1"></td></tr>
             <tr><td class="cardLocation l2"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
-            <tr><td class="cardLocation"></td></tr>
+            <tr><td class="cardLocation l3"></td></tr>
+            <tr><td class="cardLocation l4"></td></tr>
+            <tr><td class="cardLocation l5"></td></tr>
+            <tr><td class="cardLocation l6"></td></tr>
+            <tr><td class="cardLocation l7"></td></tr>
+            <tr><td class="cardLocation l8"></td></tr>
+            <tr><td class="cardLocation l9"></td></tr>
+            <tr><td class="cardLocation l10"></td></tr>
+            <tr><td class="cardLocation l11"></td></tr>
+            <tr><td class="cardLocation l12"></td></tr>
         </table>
     </td>
         <td class="columnOfCards" id="c2">
@@ -36,17 +35,16 @@
                 <tr><td class="cardLocation l0"></td></tr>
                 <tr><td class="cardLocation l1"></td></tr>
                 <tr><td class="cardLocation l2"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
+                <tr><td class="cardLocation l3"></td></tr>
+                <tr><td class="cardLocation l4"></td></tr>
+                <tr><td class="cardLocation l5"></td></tr>
+                <tr><td class="cardLocation l6"></td></tr>
+                <tr><td class="cardLocation l7"></td></tr>
+                <tr><td class="cardLocation l8"></td></tr>
+                <tr><td class="cardLocation l9"></td></tr>
+                <tr><td class="cardLocation l10"></td></tr>
+                <tr><td class="cardLocation l11"></td></tr>
+                <tr><td class="cardLocation l12"></td></tr>
             </table>
         </td>
         <td class="columnOfCards" id="c3">
@@ -54,17 +52,16 @@
                 <tr><td class="cardLocation l0"></td></tr>
                 <tr><td class="cardLocation l1"></td></tr>
                 <tr><td class="cardLocation l2"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
+                <tr><td class="cardLocation l3"></td></tr>
+                <tr><td class="cardLocation l4"></td></tr>
+                <tr><td class="cardLocation l5"></td></tr>
+                <tr><td class="cardLocation l6"></td></tr>
+                <tr><td class="cardLocation l7"></td></tr>
+                <tr><td class="cardLocation l8"></td></tr>
+                <tr><td class="cardLocation l9"></td></tr>
+                <tr><td class="cardLocation l10"></td></tr>
+                <tr><td class="cardLocation l11"></td></tr>
+                <tr><td class="cardLocation l12"></td></tr>
             </table>
         </td>
         <td class="columnOfCards" id="c4">
@@ -72,17 +69,16 @@
                 <tr><td class="cardLocation l0"></td></tr>
                 <tr><td class="cardLocation l1"></td></tr>
                 <tr><td class="cardLocation l2"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
-                <tr><td class="cardLocation"></td></tr>
+                <tr><td class="cardLocation l3"></td></tr>
+                <tr><td class="cardLocation l4"></td></tr>
+                <tr><td class="cardLocation l5"></td></tr>
+                <tr><td class="cardLocation l6"></td></tr>
+                <tr><td class="cardLocation l7"></td></tr>
+                <tr><td class="cardLocation l8"></td></tr>
+                <tr><td class="cardLocation l9"></td></tr>
+                <tr><td class="cardLocation l10"></td></tr>
+                <tr><td class="cardLocation l11"></td></tr>
+                <tr><td class="cardLocation l12"></td></tr>
             </table>
         </td>
     </tr>
@@ -92,13 +88,74 @@
 <br>
 <button id="moveButton">Move</button>
 <br>
-<h6 style="font-size:16;display:inline">From:</h6>
-<input type="text" name="moveFrom" size="5">
-<h6 style="font-size:16;display:inline">To:</h6>
-<input type="text" name="moveTo" size="5">
+<h6 style="font-size:16;display:inline">From Column:</h6>
+<input type="text" id="moveFrom" size="5">
+<h6 style="font-size:16;display:inline">To Column:</h6>
+<input type="text" id="moveTo" size="5">
 <br>
-<button id="removeButton">Remove</button>
+<button on onclick="addscore()" id="removeButton">Remove</button>
 <input type="text" name="removeCol" size="5">
+
+<script>
+<<<<<<< HEAD
+    var DataToSend;
+
+    $("#moveButton").click(function(){
+        console.log("clicked");
+        DataToSend = $("#moveFrom").val();
+        console.log(DataToSend);
+        $.ajax({
+            type: "POST",
+            url: "/MoveCardTo",
+            data: JSON.stringify(DataToSend),
+            success: function(data, status)
+                {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    DataToSend = data;
+
+                },
+            failure: function(errMsg)
+            {
+                alert(errMsg);
+            },
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            });
+    });
+
+    $("#dealButton").click(function(){
+        console.log("Deal button clicked");
+        DataToSend ="DealCards"
+        console.log(DataToSend);
+        $.ajax({
+            type: "POST",
+            url: "/StartDealingCard",
+            data: JSON.stringify(DataToSend),
+            success: function(data, status)
+                {
+                    console.log("Data: " + data + "\nStatus: " + status);
+                    DataToSend = data;
+
+                },
+            failure: function(errMsg)
+            {
+                alert(errMsg);
+            },
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            });
+    });
+=======
+var scoreValue =0;
+function addscore(){
+scoreValue = scoreValue +500;
+document.getElementById("score").innerHTML = scoreValue;
+}
+//This is just simple click and add points to score, complete function is waiting for card remove variable for bool.
+
+>>>>>>> origin/master
+</script>
+
 
 
 </body>

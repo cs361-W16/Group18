@@ -27,10 +27,10 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
 
 public class ApiControllerDocTesterTest extends NinjaDocTester {
-    
+
     String URL_INDEX = "/";
     String URL_ACES_UP = "/AcesUp";
-    
+
     @Test
     public void testGetIndex() {
 
@@ -43,7 +43,7 @@ public class ApiControllerDocTesterTest extends NinjaDocTester {
     }
 
     @Test
-    public void testAcesUp() {
+    public void testAcesUpGETrequest() {
         Response response = makeRequest(
                 Request.GET().url(
                         testServerUrl().path(URL_ACES_UP)));
@@ -51,5 +51,18 @@ public class ApiControllerDocTesterTest extends NinjaDocTester {
         assertThat(response.payload, containsString("Aces Up"));
         assertThat(response.payload, containsString("columnOfCards"));
     }
+    /*
+    I think I am doing it wrong here! I am sure post request works just fine
+    but I don't think this the right way to do it.
+    Luay
+    @Test
+    public void testAcesUpPOSTrequest() {
+        Response response = makeRequest(
+                Request.POST().url(
+                        testServerUrl().path("StartDealingCard")));
+
+        assertThat(response., containsString("DealCards"));
+    }
+    */
 
 }

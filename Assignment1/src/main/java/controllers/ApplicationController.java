@@ -18,6 +18,7 @@ package controllers;
 
 import ninja.Result;
 import ninja.Results;
+import ninja.Context;
 
 import com.google.inject.Singleton;
 
@@ -31,6 +32,28 @@ public class ApplicationController {
 
     public Result acesUp() {
         return Results.html().template("views/AcesUp/AcesUp.flt.html");
+
+
     }
+    public Result movoeTonewColumn(Context context, int value)
+    {
+
+        // logic of Move card to new column  goes here
+        return Results.json().render(value);
+
+    }
+    public Result deal(Context context, String value)
+    {
+        if(value =="DealCards")
+        {
+            // logic of start deal goes here
+        }
+        return Results.json().render(value);
+
+    }
+
+
+
+
 
 }
