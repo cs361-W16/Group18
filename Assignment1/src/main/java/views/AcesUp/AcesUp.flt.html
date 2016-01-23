@@ -2,9 +2,9 @@
 
 <link href="/assets/css/AcesUp.css" rel="stylesheet">
 <script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
-
 <body>
 
+<h2> Score: </h2><p id="score">0</p>
 <table>
     <tr class="title">
         <td>Column1</td>
@@ -93,10 +93,11 @@
 <h6 style="font-size:16;display:inline">To Column:</h6>
 <input type="text" id="moveTo" size="5">
 <br>
-<button id="removeButton">Remove</button>
+<button on onclick="addscore()" id="removeButton">Remove</button>
 <input type="text" name="removeCol" size="5">
 
 <script>
+<<<<<<< HEAD
     var DataToSend;
 
     $("#moveButton").click(function(){
@@ -144,6 +145,15 @@
             dataType:"json",
             });
     });
+=======
+var scoreValue =0;
+function addscore(){
+scoreValue = scoreValue +500;
+document.getElementById("score").innerHTML = scoreValue;
+}
+//This is just simple click and add points to score, complete function is waiting for card remove variable for bool.
+
+>>>>>>> origin/master
 </script>
 
 
