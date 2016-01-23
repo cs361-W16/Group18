@@ -93,7 +93,7 @@
 <h6 style="font-size:16;display:inline">To Column:</h6>
 <input type="text" id="moveTo" size="5">
 <br>
-<button on onclick="addscore()" id="removeButton">Remove</button>
+<button on onclick="" id="removeButton">Remove</button>
 <input type="text" name="removeCol" size="5">
 
 <script>
@@ -146,12 +146,13 @@
             });
     });
 =======
-var scoreValue =0;
+
 function addscore(){
+var scoreValue =0;
 scoreValue = scoreValue +500;
 document.getElementById("score").innerHTML = scoreValue;
 }
-//This is just simple click and add points to score, complete function is waiting for card remove variable for bool.
+//I delete the onclick action, just simply call addscore function after remove is comfirmed. .
 
 >>>>>>> origin/master
 </script>
