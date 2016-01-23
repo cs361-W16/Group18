@@ -15,7 +15,7 @@ public class GameBoard implements Serializable {
     LinkedList col2 = new LinkedList<String>();
     LinkedList col3 = new LinkedList<String>();
     LinkedList col4 = new LinkedList<String>();
-    
+
     public GameBoard() {
         ColumnList = new LinkedList<String>();
     }
@@ -51,6 +51,22 @@ public class GameBoard implements Serializable {
         return intvalue;
     }
 
+    public boolean sameSuit(char c1, char c2) {
+        if ( c1 == c2 ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean lowerNum(int num1, int num2) {
+        if ( num1 < num2 ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public boolean compare(String s1, String s2) {
         //suit declaration, if same, cancel out
         char suit1, suit2;
@@ -66,6 +82,14 @@ public class GameBoard implements Serializable {
             return true; //can remove
         }
         else {
+        if ( sameSuit(suit1, suit2) == true ) {
+            //the
+            if ( lowerNum(num1, num2) ) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
             return false; // not the same suit, can't remove
         }
     }

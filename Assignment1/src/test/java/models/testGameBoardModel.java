@@ -51,12 +51,8 @@ public class testGameBoardModel {
     @Test
     public void testSameSuit() {
         GameBoard board = new GameBoard();
-        assertEquals(true, board.compare("1d","9d"));
-    }
-    @Test
-    public void testWrongSuit() {
-        GameBoard board = new GameBoard();
-        assertEquals(false, board.compare("1c","9d"));
+        assertEquals(true, board.sameSuit('d','d'));
+        assertEquals(false, board.sameSuit('c','d'));
     }
     @Test
     public void testOneNumberConversion() {
@@ -68,6 +64,22 @@ public class testGameBoardModel {
     public void testTwoNumberconversion() {
         GameBoard board = new GameBoard();
         assertEquals(11, board.str2int("11d"));
+    }
+    @Test
+    public void testLowerNumber() {
+        GameBoard board = new GameBoard();
+        assertEquals(true, board.lowerNum(7,11));
+    }
+    @Test
+    public void testCompare(){
+        GameBoard board = new GameBoard();
+        assertEquals(true, board.compare("7d","11d"));
+
+        //this test case will only happen if column cannot be removed,
+        //as there is a bigger card or wrong suit
+        assertEquals(false, board.compare("7d","11c"));
+        assertEquals(false, board.compare("11d", "7d"));
+
     }
 
 }
